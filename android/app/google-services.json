@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "761258671775",
+    "firebase_url": "https://foodyfyp-default-rtdb.firebaseio.com",
+    "project_id": "foodyfyp",
+    "storage_bucket": "foodyfyp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761258671775:android:0d4fa1f8566b2a69cd6caa",
+        "android_client_info": {
+          "package_name": "com.example.foody"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761258671775-6dcb4a7vc04q8nt8a6uo8em5cecae358.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWuctWq7kSHkmFADKt4ZjpX21pPPDwiPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761258671775-6dcb4a7vc04q8nt8a6uo8em5cecae358.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761258671775:android:38223e3055f6af07cd6caa",
+        "android_client_info": {
+          "package_name": "com.example.foody_delivery_boy_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761258671775-6dcb4a7vc04q8nt8a6uo8em5cecae358.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWuctWq7kSHkmFADKt4ZjpX21pPPDwiPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761258671775-6dcb4a7vc04q8nt8a6uo8em5cecae358.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
