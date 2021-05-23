@@ -27,6 +27,10 @@ dependencies:
   geocoder: ^0.2.1
   font_awesome_flutter: ^8.12.0
   eva_icons_flutter: ^2.0.1
+  flutter_easyloading: ^2.2.2
+  chips_choice: ^2.0.1
+  url_launcher: ^6.0.4
+  map_launcher: ^2.0.0
 
 dev_dependencies:
   flutter_test:

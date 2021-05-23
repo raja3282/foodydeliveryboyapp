@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'file:///C:/Users/Cv/AndroidStudioProjects/foody_delivery_boy_app/lib/screens/splash.dart';
 import 'package:foody_delivery_boy_app/providers/auth.dart';
+import 'package:foody_delivery_boy_app/providers/order_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -17,6 +18,7 @@ class FoodyDeliveryApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => (Authentication())),
+        ChangeNotifierProvider(create: (_) => (OrderProvider())),
       ],
       child: MaterialApp(
         title: 'Foody Delivery Boy App',

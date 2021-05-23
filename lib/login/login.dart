@@ -108,25 +108,33 @@ class _LoginState extends State<Login> {
                 RoundedButton(
                   title: 'Login',
                   color: kcolor2,
-                  onPressed: () {
+                  onPressed: () async {
+                    setState(() {
+                      showSpinner = true;
+                    });
                     if (formkey.currentState.validate()) {
                       try {
-                        Provider.of<Authentication>(context, listen: false)
-                            .loginIntoAccount(email, password)
-                            .whenComplete(() {
+                        final user = await _auth.signInWithEmailAndPassword(
+                            email: email, password: password);
+                        if (user != null) {
                           Navigator.pushReplacement(
                               context,
                               PageTransition(
-                                  child: Orders(),
+                                  child: MyOrders(),
                                   type:
                                       PageTransitionType.leftToRightWithFade));
-                        });
+                          showSpinner = false;
+                        }
                       } catch (e) {
+                        setState(() {
+                          showSpinner = false;
+                        });
                         print(e);
                         Toast.show(e.message, context,
                             duration: Toast.LENGTH_LONG, gravity: Toast.TOP);
                       }
                     } else {
+                      showSpinner = false;
                       return null;
                     }
                   },

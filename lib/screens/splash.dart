@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:foody_delivery_boy_app/screens/orders.dart';
 import 'package:foody_delivery_boy_app/welcome/welcome.dart';
 import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
@@ -13,13 +15,24 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   void initState() {
-    Timer(
-        Duration(seconds: 4),
-        () => (Navigator.pushReplacement(
+    Timer(Duration(seconds: 4), () {
+      FirebaseAuth.instance.authStateChanges().listen((User user) {
+        if (user == null) {
+          Navigator.pushReplacement(
             context,
             PageTransition(
-                child: Welcome(),
-                type: PageTransitionType.leftToRightWithFade))));
+                child: Welcome(), type: PageTransitionType.leftToRightWithFade),
+          );
+        } else {
+          Navigator.pushReplacement(
+            context,
+            PageTransition(
+                child: MyOrders(),
+                type: PageTransitionType.leftToRightWithFade),
+          );
+        }
+      });
+    });
     super.initState();
   }
 
